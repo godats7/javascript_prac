@@ -1,0 +1,43 @@
+<!-- <script></script> 태그를 만들어서 여기에 자바스크립트 코드를 삽입하는 방식이다. 장점은 html 태그와 js 코드를 분리할 수 있다는 점이다. 
+name 과 class를 통해 전달되지 않는 addEventListener는 나중에 다시 공부 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+
+    <body>
+        <input type="button" id="hello" value="hello world by id">
+        <input type="button" name="hello" value="hello world by name">
+        <input type="button" class="hello" value="hello world by class">
+        <input type="button" id="hello2" value="hello world by script2">
+    </body>
+    <script>
+        var hello = document.getElementById('hello')
+        hello.addEventListener('click', function test() {
+            alert('hello world by id')
+        })
+
+        var hello = document.getElementsByName("hello")
+        hello.addEventListener('click', function test() {
+            alert('hello world by name')
+        })
+
+        var hello = document.getElementsByClassName("hello")
+        hello.addEventListener('click', function test() {
+            alert('hello world by class')
+        })
+    </script>
+
+<!-- // js를 별도의 파일로 분리할 수도 있다. 
+// 장점은 보다 엄격하게 정보와 제어를 분리할 수 있다. 
+// 하나의 js 파일을 여러 웹페이지에서 로드함으로서 js의 재활용성을 높일 수 있다. 
+// 캐쉬를 통해서 속도의 향상, 전송량의 경량화를 도모할 수 있다 -->
+
+    <script type="text/javascript" src="2.script2.js">
+    
+    
+    </script>
+
+</html>
