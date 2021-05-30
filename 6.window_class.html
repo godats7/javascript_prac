@@ -1,0 +1,23 @@
+<!-- 예제를 통해서 알 수 있는 것은 전역변수와 함수가 사실은 window 객체의 프로퍼티와 메소드라는 것이다. 
+또한 모든 객체는 사실 window의 자식이라는 것도 알 수 있다. 
+이러한 특성을 ECMAScript에서는 Global 객체라고 부른다. 
+ECMAScript의 Global 객체는 호스트 환경에 따라서 이름이 다르고 하는 역할이 조금씩 다르다. 
+웹브라우저 자바스크립트에서 Window 객체는 ECMAScript의 전역객체이면서 동시에 웹브라우저의 창이나 프레임을 제어하는 역할을 한다.
+
+객체를 만든다는 것은 결국 window 객체의 프로퍼티를 만드는 것과 같다. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+
+    <body>
+        <script>
+            var a = {id:1};
+            alert(a.id);
+            alert(window.a.id);
+        </script>
+    </body>
+
+</html>

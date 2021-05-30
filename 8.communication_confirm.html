@@ -1,0 +1,18 @@
+<!-- 확인을 누르면 true, 취소를 누르면 false를 리턴한다. -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="button" value="confirm" onclick="func_confirm()" />
+        <input type="button" value="onclick" onclick="alert('onclick')">
+        <script>
+            function func_confirm(){
+                if(confirm('ok')){
+                    alert('ok');
+                } else {
+                    alert('cancel');
+                }
+            }
+        </script>
+    </body>
+</html>
